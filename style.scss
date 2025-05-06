@@ -1,0 +1,809 @@
+// Variables
+$primary-color: #f3a683;
+$secondary-color: #0984e3;
+$text-dark: #2d3436;
+$text-light: #ffffff;
+$button-bg: #772f1a;
+
+// Base styles
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $text-dark;
+  line-height: 1.6;
+  background-color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Teko", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Header styles
+.header {
+  background-color: $primary-color;
+  padding: 1rem 0;
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: $text-dark;
+  }
+  
+  .nav-link {
+    color: $text-dark;
+    font-weight: 500;
+    margin-left: 1rem;
+    
+    &:hover {
+      color: darken($text-dark, 20%);
+    }
+  }
+}
+
+// Hero section
+
+.hero {
+  background-color: $primary-color;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    
+    @media (min-width: 992px) {
+      text-align: left;
+    }
+  }
+  
+  .hero-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    @media (min-width: 992px) {
+      text-align: left;
+    }
+  }
+  
+  .professional-photo {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    
+    img {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+  }
+}
+
+.introduction {
+  margin-top: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    padding-bottom: 2rem;
+  }
+}
+
+// Introduction section
+.introduction {
+  background-color: $secondary-color;
+  padding: 3rem 0;
+  color: $text-light;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .browser-window {
+    background-color: $text-light;
+    height: 150px;
+    border: 2px solid $text-dark;
+    position: relative;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-color: #dfe6e9;
+      border-bottom: 1px solid #b2bec3;
+    }
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    
+    @media (min-width: 768px) {
+      padding-left: 2rem;
+    }
+  }
+}
+
+// Projects section
+.projects {
+  background-color: $primary-color;
+  padding: 3rem 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .project-card {
+    background-color: lighten($primary-color, 5%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    
+    .project-image {
+      height: 150px;
+      background-color: $text-light;
+      margin-bottom: 1rem;
+    }
+    
+    .project-description {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Let's Talk section
+.lets-talk {
+  background-color: $primary-color;
+  padding: 3rem 0;
+  
+  h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .handshake-icon {
+    margin-bottom: 2rem;
+  }
+}
+
+// Button styles
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 0;
+  font-weight: 600;
+  
+  &-contact {
+    background-color: $button-bg;
+    color: $text-light;
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    
+    &:hover {
+      background-color: darken($button-bg, 10%);
+      color: $text-light;
+    }
+  }
+  
+  &-view {
+    background-color: $button-bg;
+    color: $text-light;
+    font-size: 0.85rem;
+    padding: 0.3rem 1rem;
+    
+    &:hover {
+      background-color: darken($button-bg, 10%);
+      color: $text-light;
+    }
+  }
+}
+
+// Media queries for responsive design
+@media (max-width: 991.98px) {
+  .hero {
+    text-align: center;
+    
+    .btn-contact {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro-text {
+    margin-top: 1.5rem;
+  }
+}
+
+// About section
+.about-section {
+    padding: 3rem 0;
+    background-color: $primary-color;
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-dark;
+    }
+  }
+  
+  // Window frame styling
+  .window-frame {
+    background-color: #fff;
+    border: 2px solid #1a237e;
+    border-radius: 0;
+    overflow: hidden;
+    height: 100%;
+    
+    .window-header {
+      background-color: #1a237e;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .window-title {
+        font-family: monospace;
+        font-size: 0.9rem;
+      }
+      
+      .window-controls {
+        display: flex;
+        gap: 0.5rem;
+        
+        span {
+          cursor: pointer;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .window-content {
+      padding: 1rem;
+      height: calc(100% - 30px);
+      overflow: auto;
+      
+      p {
+        font-family: monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  
+  // Profile image styling
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #c19a6b;
+    position: relative;
+    overflow: hidden;
+    
+    // Placeholder for the face illustration
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 140px;
+      background-color: #f8bbbb;
+      border-radius: 60% 60% 40% 40%;
+    }
+    
+    // Hair styling
+    &:before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 100px;
+      background-color: #3a3238;
+      border-radius: 50% 50% 20% 20%;
+    }
+  }
+  
+  // Fun facts list
+  .fun-facts {
+    font-family: monospace;
+    font-size: 0.9rem;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  // Button styling for desktop vs mobile
+  .desktop-button {
+    display: block;
+    
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+  
+  .mobile-button {
+    display: none;
+    background-color: #f39c12;
+    color: $text-dark;
+    
+    &:hover {
+      background-color: darken(#f39c12, 10%);
+      color: $text-dark;
+    }
+    
+    @media (max-width: 767.98px) {
+      display: inline-block;
+    }
+  }
+  
+  // Mobile optimizations
+  @media (max-width: 767.98px) {
+    .about-section {
+      .section-title {
+        text-align: right;
+        margin-right: 1rem;
+      }
+    }
+    
+    .window-frame {
+      margin-bottom: 1rem;
+    }
+    
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      
+      &:after {
+        top: 30px;
+        width: 80px;
+        height: 90px;
+      }
+      
+      &:before {
+        top: 20px;
+        width: 90px;
+        height: 70px;
+      }
+    }
+  }
+
+  // Projects section
+.projects-section {
+    padding: 3rem 0;
+    background-color: $primary-color;
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  // Project card styling (expanded from homepage styles)
+  .project-card {
+    background-color: lighten($primary-color, 5%);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    height: 100%;
+    border: 2px solid lighten($primary-color, 8%);
+    
+    .project-image {
+      background-color: $text-light;
+      width: 100%;
+      height: 150px;
+      margin-bottom: 1rem;
+    }
+    
+    .project-description {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      font-family: monospace;
+      color: $text-dark;
+    }
+    
+    .btn-view {
+      background-color: $button-bg;
+      color: $text-light;
+      font-size: 0.9rem;
+      padding: 0.3rem 1.5rem;
+      border-radius: 0;
+      display: block;
+      width: 100%;
+      
+      &:hover {
+        background-color: darken($button-bg, 10%);
+        color: $text-light;
+      }
+    }
+  }
+  
+  // Media queries for responsive design
+  @media (max-width: 991.98px) {
+    .projects-section {
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .projects-section {
+      .section-title {
+        text-align: left;
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .project-card {
+      .project-image {
+        height: 120px;
+      }
+      
+      .project-description {
+        font-size: 0.75rem;
+      }
+      
+      .btn-view {
+        font-size: 0.8rem;
+        padding: 0.2rem 1rem;
+      }
+    }
+  }
+
+  // Contact section
+.contact-section {
+    padding: 3rem 0;
+    background-color: $primary-color;
+    min-height: calc(100vh - 70px);
+  }
+  
+  // Contact form container
+  .contact-form-container {
+    padding: 1rem;
+    
+    .contact-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+  }
+  
+  // Form styling
+  .contact-form {
+    .form-label {
+      font-size: 0.9rem;
+      color: $text-dark;
+      margin-bottom: 0.3rem;
+    }
+    
+    .form-control {
+      border: none;
+      border-radius: 0;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $secondary-color;
+      }
+    }
+    
+    .dropdown-toggle {
+      background-color: white;
+      text-align: left;
+      position: relative;
+      
+      &::after {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    
+    .dropdown-menu {
+      border-radius: 0;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      
+      .dropdown-item {
+        padding: 0.75rem 1rem;
+        
+        &:hover {
+          background-color: lighten($primary-color, 10%);
+        }
+      }
+    }
+    
+    textarea {
+      resize: none;
+    }
+    
+    .character-count {
+      font-size: 0.8rem;
+      color: lighten($text-dark, 20%);
+    }
+    
+    .btn-contact {
+      margin-top: 1rem;
+      padding: 0.5rem 2.5rem;
+    }
+  }
+  
+  // Contact info styling
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    height: 100%;
+  }
+  
+  .contact-info-card {
+    background-color: white;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    
+    .info-title {
+      color: $text-dark;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      
+      .info-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #1a237e;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        color: white;
+        font-size: 1.25rem;
+      }
+      
+      .info-text {
+        font-size: 0.9rem;
+        color: $text-dark;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  // Mobile specific styling
+  .mobile-contact-info {
+    display: none;
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 991.98px) {
+    .desktop-view {
+      display: none;
+    }
+    
+    .mobile-contact-info {
+      display: block;
+    }
+    
+    .contact-form-container {
+      .contact-title {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    .contact-section {
+      padding-top: 1.5rem;
+    }
+    
+    // Mobile handshake icon
+    .handshake-icon {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      
+      svg {
+        width: 120px;
+        height: 60px;
+      }
+    }
+  }
+
+  /// Indidivual Project Page 
+  .project-detail {
+    background-color: $primary-color;
+    padding: 3rem 0;
+    min-height: calc(100vh - 70px);
+    
+    .project-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-name-banner {
+      background-color: lighten($primary-color, 5%);
+      padding: 0.75rem 1rem;
+      
+      h2 {
+        margin-bottom: 0;
+        font-size: 1.75rem;
+        color: $text-dark;
+      }
+    }
+    
+    .skills-section, .description-section {
+      margin-bottom: 1.5rem;
+      
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: $text-dark;
+      }
+    }
+    
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      
+      li {
+        position: relative;
+        padding-left: 1rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+        
+        &:before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: $text-dark;
+        }
+      }
+    }
+    
+    .description-section p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .time-completion {
+      font-size: 0.9rem;
+      color: $text-dark;
+    }
+    
+    .project-screenshots {
+      margin-top: 1.5rem;
+      
+      .screenshot-carousel-container {
+        background-color: white;
+        padding: 3rem 2rem;
+        border: 1px solid #ddd;
+        
+        .carousel-placeholder {
+          color: #888;
+          margin-bottom: 0;
+        }
+      }
+      
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        
+        .indicator {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #ddd;
+          cursor: pointer;
+          
+          &.active {
+            background-color: white;
+          }
+        }
+      }
+    }
+    
+    .btn-link {
+      background-color: $button-bg;
+      color: $text-light;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 0;
+      
+      &:hover {
+        background-color: darken($button-bg, 10%);
+        color: $text-light;
+      }
+    }
+  }
+  
+  // Media queries for responsive design
+  @media (max-width: 767.98px) {
+    .project-detail {
+      padding: 1.5rem 0;
+      
+      .project-title {
+        font-size: 1.75rem;
+      }
+      
+      .project-name-banner h2 {
+        font-size: 1.5rem;
+      }
+      
+      .skills-section, .description-section {
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+      
+      .skills-section {
+        margin-bottom: 1rem;
+      }
+      
+      .description-section p {
+        font-size: 0.85rem;
+      }
+      
+      .project-screenshots {
+        .screenshot-carousel-container {
+          padding: 2rem 1rem;
+        }
+      }
+      
+      .time-completion {
+        text-align: center;
+      }
+    }
+  }
